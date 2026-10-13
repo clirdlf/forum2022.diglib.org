@@ -1,3 +1,4 @@
+import {load} from 'cheerio';
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {parseExport} from './lib/wxr.mjs';import {crawlPublicSite} from './lib/crawl.mjs';import {fetchPage} from './lib/download.mjs';
 import {normalizePage} from './lib/normalize.mjs';
@@ -11,6 +12,7 @@ console.log(`Inventoried ${result.included.length} exported records and ${result
 
 if(!process.argv.includes('--inventory-only')){
  const urls=new Set(result.captures.flatMap(c=>[...collectAssetUrls(c.html,c.url)]));
+ for(const c of result.captures){const $=load(c.html);$('script[src]').each((_,e)=>{const url=$(e).attr('src');if(url.includes('/swiper/')&&url.includes('.js'))urls.add(url);});}
  const assets=await localizeAssets({urls,fetchAsset:fetchResource,outputDir:'src/assets/vendor',cacheDir:'.cache/assets'});
  const manifest=JSON.parse(await readFile('data/archive/manifest.json','utf8'));manifest.assetMap=assets.assetMap;manifest.issues.push(...assets.issues);await writeFile('data/archive/manifest.json',JSON.stringify(manifest,null,2)+'\n');
  console.log(`Localized ${Object.keys(assets.assetMap).length} assets.`);

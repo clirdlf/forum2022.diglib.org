@@ -1,0 +1,1 @@
+export default class {data(){return {permalink:'/search-index.json',eleventyExcludeFromCollections:true};}render({archive}){return JSON.stringify(archive.filter(p=>p.type!=='archive').map(p=>({title:p.title,path:p.path,text:p.searchText,type:p.type})));}}

@@ -8,7 +8,7 @@ function visitCss(css,base,callback){
 }
 export function rewriteCss(css,sourceUrl,assetMap){return visitCss(css,sourceUrl,u=>assetMap[u]);}
 export function collectAssetUrls(html,pageUrl){const $=load(html);const urls=new Set();const add=v=>{const u=resolveAsset(v,pageUrl);if(u)urls.add(u);};
- $('img,video,audio,source,track').each((_,e)=>{for(const attr of ['src','poster'])add($(e).attr(attr));const set=$(e).attr('srcset');if(set)for(const candidate of set.split(','))add(candidate.trim().split(/\s+/)[0]);});
+ $('img,video,audio,source,track').each((_,e)=>{for(const attr of ['src','poster','data-src'])add($(e).attr(attr));const set=$(e).attr('srcset');if(set)for(const candidate of set.split(','))add(candidate.trim().split(/\s+/)[0]);});
  $('link[rel="stylesheet"],link[rel="icon"],link[rel="apple-touch-icon"]').each((_,e)=>add($(e).attr('href')));
  $('a[href]').each((_,e)=>{const u=resolveAsset($(e).attr('href'),pageUrl);if(u&&new URL(u).origin===new URL(pageUrl).origin&&/\.(pdf|docx?|xlsx?|zip|mp[34])$/i.test(new URL(u).pathname))add(u);});
  $('style').each((_,e)=>visitCss($(e).html()||'',pageUrl,u=>{urls.add(u);}));

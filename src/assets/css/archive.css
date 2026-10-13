@@ -8,3 +8,24 @@
 .archive-scroll-top.visible {display:block}
 :focus-visible {outline:2px solid #2166b3;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}
+[hidden]{display:none!important}
+.archive-static .header-menu-sidebar {visibility:hidden}
+.archive-static.is-menu-sidebar .header-menu-sidebar {visibility:visible;transform:translateX(0);left:0}
+.archive-static.is-menu-sidebar .wrapper {transform:none}
+.archive-search-results {padding:50px 20px;min-height:60vh}
+.archive-search-results form {display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.archive-search-results input {max-width:100%;width:320px}
+.archive-search-results article {padding:20px 0;border-bottom:1px solid #ddd}
+.archive-search-results h2 {margin-bottom:10px}
+.archive-carousel-pause {display:block;margin:8px auto 0;padding:3px 10px;background:transparent;color:inherit;border:1px solid currentColor;font-size:12px;font-weight:400;line-height:1.5}
+.archive-static .elementor-headline-dynamic-wrapper {position:relative}
+.archive-static .elementor-headline-dynamic-wrapper:after {content:'';position:absolute;left:0;right:0;bottom:2px;height:3px;background:#21baa7;transform:rotate(-1deg)}
+.archive-static .elementor-headline-dynamic-text:not(:first-child) {display:none}
+.archive-static .elementor-widget-video iframe {width:100%;height:100%;border:0;aspect-ratio:16/9}
+.archive-toc-collapsed .elementor-toc__toggle-button--collapse{display:none}
+.archive-toc-collapsed .elementor-toc__toggle-button--expand{display:block}
+.archive-lightbox {max-width:95vw;max-height:95vh;padding:12px;background:#fff;border:0}
+.archive-lightbox::backdrop {background:rgba(0,0,0,.85)}
+.archive-lightbox img {display:block;max-height:80vh;max-width:90vw;object-fit:contain}
+.archive-lightbox button {display:block;margin-left:auto;margin-bottom:10px}
+.archive-static .elementor-nav-menu--dropdown.archive-footer-open {display:block;max-height:none;transform:scaleY(1);overflow:visible}

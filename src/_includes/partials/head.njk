@@ -4,3 +4,6 @@
 <link rel="canonical" href="{{ entry.path | absoluteUrl }}">
 {{ entry.headHtml | safe }}
 <link rel="stylesheet" href="/assets/css/archive.css">
+
+{% if site.swiperUrl %}<script src="{{ site.swiperUrl }}" defer></script>{% endif %}
+<script src="/assets/js/site.js" type="module"></script>

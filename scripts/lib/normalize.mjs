@@ -17,6 +17,9 @@ export function normalizePage(capture,record,assetMap){
  });
  $('a[aria-current]').removeAttr('aria-current');
  const main=$('main#content,#content,main').first();if(!main.length)throw Error(`No content: ${capture.url}`);
+ main.find('img[data-src]').each((_,e)=>{if(!$(e).attr('src'))$(e).attr('src',$(e).attr('data-src'));$(e).attr('loading','lazy');});
+ main.find('.elementor-widget-video').each((_,e)=>{const settings=JSON.parse($(e).attr('data-settings')||'{}');if(settings.video_type==='youtube'&&settings.youtube_url){const u=new URL(settings.youtube_url);const id=u.hostname==='youtu.be'?u.pathname.slice(1):u.searchParams.get('v');if(id&&/^[\w-]+$/.test(id)){const iframe=$('<iframe>').attr({src:'https://www.youtube.com/embed/'+id,title:'DLF Forum video',loading:'lazy',allowfullscreen:'',allow:'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'});$(e).find('.elementor-video').replaceWith(iframe);}}});
+ main.find('.elementor-widget-table-of-contents').each((_,e)=>{const settings=JSON.parse($(e).attr('data-settings')||'{}');const list=$('<ul class="elementor-toc__list-wrapper">');main.find((settings.headings_by_tags||['h2','h3','h4','h5','h6']).join(',')).filter((_,h)=>!$(h).closest('.elementor-widget-table-of-contents').length).each((i,h)=>{const id=$(h).attr('id')||'elementor-toc__heading-anchor-'+i;$(h).attr('id',id);const link=$('<a class="elementor-toc__list-item-text">').attr('href','#'+id).text($(h).text());list.append($('<li class="elementor-toc__list-item">').append(link));});$(e).find('.elementor-toc__body').empty().append(list);});
  const bodyHtml=$.html(main);const searchText=text($.html(main));
  if(record?.contentHtml){
   const exported=load(record.contentHtml);const canonical=value=>value.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]/gu,'');
