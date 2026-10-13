@@ -1,0 +1,9 @@
+---
+pagination:
+  data: redirects
+  size: 1
+  alias: redirect
+permalink: "{{ redirect.path }}"
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page moved — DLF Forum 2022</title><link rel="canonical" href="{{ redirect.target | absoluteUrl }}"><meta http-equiv="refresh" content="0;url={{ redirect.target }}"></head><body><p>This page has moved to <a href="{{ redirect.target }}">{{ redirect.target }}</a>.</p></body></html>

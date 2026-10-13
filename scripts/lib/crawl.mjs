@@ -7,7 +7,7 @@ export function isContentUrl(url, origin) {
  return url.origin===origin && !/^\/(wp-admin|wp-json|wp-content|wp-includes|cdn-cgi|feed|comments)(\/|$)/.test(url.pathname) && !/\.(?:jpg|jpeg|png|webp|gif|svg|pdf|docx?|xlsx?|zip|mp[34]|css|js|woff2?|ico|xml)$/i.test(url.pathname) && !url.pathname.endsWith('/feed/') && [...url.searchParams.keys()].every(k=>['paged','page'].includes(k));
 }
 export async function crawlPublicSite({origin,records,fetchPage,cacheDir}) {
- await mkdir(cacheDir,{recursive:true});const queue=[origin+'/'];const seen=new Set();const captures=[];const issues=[];
+ await mkdir(cacheDir,{recursive:true});const queue=[origin+'/'];const seen=new Set();const captures=[];const issues=[];const aliases=[];
  const byPath=new Map(records.filter(r=>['page','post'].includes(r.type)&&!new URL(r.url).search).map(r=>[r.path,r]));
  while(queue.length){
   const requestUrl=queue.shift();if(seen.has(requestUrl))continue;seen.add(requestUrl);
@@ -22,6 +22,7 @@ export async function crawlPublicSite({origin,records,fetchPage,cacheDir}) {
    capture={url:final.href,path:final.pathname,html:response.body,sourceHash:hash(response.body)};
    await writeFile(file,JSON.stringify(capture));
   }
+  if(request.pathname!==capture.path)aliases.push({path:request.pathname,target:capture.path});
   if(!captures.some(c=>c.url===capture.url))captures.push(capture);
   const $=load(capture.html);
   for(const a of $('a[href]').toArray()){
@@ -31,5 +32,5 @@ export async function crawlPublicSite({origin,records,fetchPage,cacheDir}) {
  }
  const paths=new Set(captures.map(c=>c.path));
  const eligible=records.filter(r=>r.status==='publish'&&['page','post'].includes(r.type));
- return {captures,included:eligible.filter(r=>paths.has(r.path)),excluded:eligible.filter(r=>!paths.has(r.path)),issues};
+ return {captures,included:eligible.filter(r=>paths.has(r.path)),excluded:eligible.filter(r=>!paths.has(r.path)),aliases,issues};
 }

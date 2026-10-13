@@ -3,7 +3,8 @@ const text = value => load((value||'').replace(/<[^>]*>/g,' ')).text().replace(/
 function decodeEmail(hex){const key=parseInt(hex.slice(0,2),16);return Buffer.from(hex.slice(2).match(/../g).map(v=>parseInt(v,16)^key)).toString('utf8');}
 export function normalizePage(capture,record,assetMap){
  const $=load(capture.html);const issues=[];const rewrite=value=>{if(!value||/^(#|mailto:|tel:|data:)/i.test(value))return value;try{const u=new URL(value,capture.url);const bare=new URL(u);bare.hash='';if(assetMap[bare.href])return assetMap[bare.href]+u.hash;if(u.hostname===new URL(capture.url).hostname)return u.pathname+u.search+u.hash;return value;}catch{return value;}};
- $('script,#wpadminbar,#wp-toolbar,#pojo-a11y-toolbar,#pojo-a11y-skip-content,[class*="wpa-toolbar"],link[rel="https://api.w.org/"],link[rel="EditURI"]').remove();
+ $('script').filter((_,e)=>{try{return new URL($(e).attr('src')||'',capture.url).href!=='https://clirevents2022.sched.com/js/embed.js';}catch{return true;}}).remove();
+ $('#wpadminbar,#wp-toolbar,#pojo-a11y-toolbar,#pojo-a11y-skip-content,[class*="wpa-toolbar"],link[rel="https://api.w.org/"],link[rel="EditURI"]').remove();
  $('link').each((_,e)=>{const rel=$(e).attr('rel');if(!['stylesheet','icon','apple-touch-icon'].includes(rel)||excludedAsset($(e).attr('href')||''))$(e).remove();});
  $('style').each((_,e)=>{if(/wpa|emoji/i.test($(e).attr('id')||''))$(e).remove();else $(e).html(rewriteCss($(e).html()||'',capture.url,assetMap));});
  $('meta').each((_,e)=>{if($(e).attr('content'))$(e).attr('content',rewrite($(e).attr('content')));});
@@ -17,6 +18,7 @@ export function normalizePage(capture,record,assetMap){
  });
  $('a[aria-current]').removeAttr('aria-current');
  const main=$('main#content,#content,main').first();if(!main.length)throw Error(`No content: ${capture.url}`);
+ const schedScript=$('script[src*="clirevents2022.sched.com/js/embed.js"]').first();if(schedScript.length){schedScript.attr('src','https://clirevents2022.sched.com/js/embed.js').attr('defer','');main.append(schedScript);}
  main.find('img[data-src]').each((_,e)=>{if(!$(e).attr('src'))$(e).attr('src',$(e).attr('data-src'));$(e).attr('loading','lazy');});
  main.find('.elementor-widget-video').each((_,e)=>{const settings=JSON.parse($(e).attr('data-settings')||'{}');if(settings.video_type==='youtube'&&settings.youtube_url){const u=new URL(settings.youtube_url);const id=u.hostname==='youtu.be'?u.pathname.slice(1):u.searchParams.get('v');if(id&&/^[\w-]+$/.test(id)){const iframe=$('<iframe>').attr({src:'https://www.youtube.com/embed/'+id,title:'DLF Forum video',loading:'lazy',allowfullscreen:'',allow:'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'});$(e).find('.elementor-video').replaceWith(iframe);}}});
  main.find('.elementor-widget-table-of-contents').each((_,e)=>{const settings=JSON.parse($(e).attr('data-settings')||'{}');const list=$('<ul class="elementor-toc__list-wrapper">');main.find((settings.headings_by_tags||['h2','h3','h4','h5','h6']).join(',')).filter((_,h)=>!$(h).closest('.elementor-widget-table-of-contents').length).each((i,h)=>{const id=$(h).attr('id')||'elementor-toc__heading-anchor-'+i;$(h).attr('id',id);const link=$('<a class="elementor-toc__list-item-text">').attr('href','#'+id).text($(h).text());list.append($('<li class="elementor-toc__list-item">').append(link));});$(e).find('.elementor-toc__body').empty().append(list);});

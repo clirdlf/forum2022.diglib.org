@@ -1,5 +1,6 @@
+import {init as layout} from './layout.js';
 import {init as navigation} from './navigation.js';import {init as search} from './search.js';import {init as disclosures} from './disclosures.js';import {init as carousels} from './carousels.js';
-navigation();search();disclosures();carousels();
+layout();navigation();search();disclosures();carousels();
 // The original animated underline is recreated without hiding the heading text.
 document.querySelectorAll('.elementor-widget-animated-headline .elementor-headline-dynamic-text').forEach(el=>el.classList.add('archive-headline-visible'));
 const lightbox=document.createElement('dialog');lightbox.className='archive-lightbox';const close=document.createElement('button');close.textContent='Close';close.type='button';const image=document.createElement('img');lightbox.append(close,image);document.body.append(lightbox);close.addEventListener('click',()=>lightbox.close());lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close();});

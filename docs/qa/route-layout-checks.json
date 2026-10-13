@@ -1,0 +1,642 @@
+{
+  "desktopAudit": [
+    {
+      "path": "/",
+      "headings": 7,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/about/",
+      "headings": 4,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/news/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/about/code-of-conduct/",
+      "headings": 4,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/about/land-acknowledgement/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/about/team/",
+      "headings": 4,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/social-and-wellness-activities/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/livestream-recordings/",
+      "headings": 4,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/affiliated-events/",
+      "headings": 5,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/affiliated-events/learndlf/",
+      "headings": 3,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/resources/",
+      "headings": 7,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/resources/hotel-accommodations/",
+      "headings": 4,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/resources/for-attendees/",
+      "headings": 11,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/resources/for-presenters-moderators/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/resources/health-protocols/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/resources/local-guide/",
+      "headings": 3,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/resources/faq/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/sponsorship/sponsors/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/sponsorship/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/fellowships/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/fellowships/meet-the-fellows/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/update-covid-19-and-clirs-2022-events-september-26/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/update-covid-19-and-clirs-2022-events-september-13/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/a-note-about-clirs-2022-in-person-events/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/update-covid-19-and-clirs-2022-events-august-1/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/programs-are-live-for-clirs-2022-events-dlf-forum-learndlf-digipres-dhc-symposium/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/registration-is-now-open-for-clirs-2022-events/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/community-voting-for-all-2022-clir-events-is-now-open/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/update-covid-19-and-clirs-2022-events-may-10/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022-dlf-forum-fellowship-applications-open-now-through-may-31/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/news/2/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/meredith-broussard/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/david-nemer/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/sara-mannheimer/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/andrew-coy/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/dorothy-berry/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/michelle-caswell/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/author/areich/",
+      "headings": 4,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/09/26/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/author/gschechter/",
+      "headings": 9,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/09/13/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/08/01/",
+      "headings": 3,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/07/12/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/registration/",
+      "headings": 5,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/06/21/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/05/11/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/05/10/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/05/02/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/plans-for-in-person-dlf-forum-and-affiliated-events-during-covid-19/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022-cfps-now-live/",
+      "headings": 1,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/2022/03/01/",
+      "headings": 3,
+      "hiddenSections": 0,
+      "overflow": false
+    },
+    {
+      "path": "/forum-cfp/",
+      "headings": 2,
+      "hiddenSections": 0,
+      "overflow": false
+    }
+  ],
+  "mobileAudit": [
+    {
+      "path": "/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/about/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/news/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/about/code-of-conduct/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/about/land-acknowledgement/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/about/team/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/social-and-wellness-activities/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/livestream-recordings/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/affiliated-events/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/affiliated-events/learndlf/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/resources/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/resources/hotel-accommodations/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/resources/for-attendees/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/resources/for-presenters-moderators/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/resources/health-protocols/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/resources/local-guide/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/resources/faq/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/sponsorship/sponsors/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/sponsorship/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/fellowships/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/fellowships/meet-the-fellows/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/update-covid-19-and-clirs-2022-events-september-26/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/update-covid-19-and-clirs-2022-events-september-13/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/a-note-about-clirs-2022-in-person-events/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/update-covid-19-and-clirs-2022-events-august-1/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/programs-are-live-for-clirs-2022-events-dlf-forum-learndlf-digipres-dhc-symposium/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/registration-is-now-open-for-clirs-2022-events/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/community-voting-for-all-2022-clir-events-is-now-open/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/update-covid-19-and-clirs-2022-events-may-10/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022-dlf-forum-fellowship-applications-open-now-through-may-31/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/news/2/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/meredith-broussard/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/david-nemer/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/sara-mannheimer/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/andrew-coy/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/dorothy-berry/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/schedule/keynote-speakers/michelle-caswell/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/author/areich/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/09/26/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/author/gschechter/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/09/13/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/08/01/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/07/12/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/registration/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/06/21/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/05/11/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/05/10/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/05/02/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/plans-for-in-person-dlf-forum-and-affiliated-events-during-covid-19/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022-cfps-now-live/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/2022/03/01/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    },
+    {
+      "path": "/forum-cfp/",
+      "hiddenSections": 0,
+      "main": true,
+      "overflow": false
+    }
+  ]
+}

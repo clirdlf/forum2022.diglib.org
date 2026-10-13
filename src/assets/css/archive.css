@@ -29,3 +29,8 @@
 .archive-lightbox img {display:block;max-height:80vh;max-width:90vw;object-fit:contain}
 .archive-lightbox button {display:block;margin-left:auto;margin-bottom:10px}
 .archive-static .elementor-nav-menu--dropdown.archive-footer-open {display:block;max-height:none;transform:scaleY(1);overflow:visible}
+.archive-static .nv-nav-search {right:0;left:auto}
+.archive-static .menu-item-nav-search.minimal .nv-nav-search {right:0;left:auto}
+/* Long headings and URLs overflowed narrow screens in the source theme. */
+@media(max-width:767px){.archive-static main{overflow-wrap:anywhere}.archive-static .elementor-heading-title,.archive-static .elementor-headline{overflow-wrap:anywhere;white-space:normal}}
+@media(max-width:767px){.archive-static h1.elementor-heading-title{font-size:clamp(28px,9vw,40px)!important;line-height:1.2}}
