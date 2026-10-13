@@ -1,0 +1,728 @@
+{
+  "origin": "https://forum2022.diglib.org",
+  "capturedAt": "2026-10-13T18:19:51.465Z",
+  "included": [
+    {
+      "id": 86,
+      "type": "page",
+      "status": "publish",
+      "title": "Home",
+      "url": "https://forum2022.diglib.org/",
+      "path": "/",
+      "date": "2022-01-28 18:38:51"
+    },
+    {
+      "id": 88,
+      "type": "page",
+      "status": "publish",
+      "title": "About",
+      "url": "https://forum2022.diglib.org/about/",
+      "path": "/about/",
+      "date": "2022-01-28 18:40:56"
+    },
+    {
+      "id": 105,
+      "type": "page",
+      "status": "publish",
+      "title": "Code of Conduct",
+      "url": "https://forum2022.diglib.org/about/code-of-conduct/",
+      "path": "/about/code-of-conduct/",
+      "date": "2022-01-28 18:57:23"
+    },
+    {
+      "id": 107,
+      "type": "page",
+      "status": "publish",
+      "title": "Land Acknowledgement",
+      "url": "https://forum2022.diglib.org/about/land-acknowledgement/",
+      "path": "/about/land-acknowledgement/",
+      "date": "2022-01-28 18:58:02"
+    },
+    {
+      "id": 109,
+      "type": "page",
+      "status": "publish",
+      "title": "The Team",
+      "url": "https://forum2022.diglib.org/about/team/",
+      "path": "/about/team/",
+      "date": "2022-01-28 18:58:47"
+    },
+    {
+      "id": 111,
+      "type": "page",
+      "status": "publish",
+      "title": "Schedule",
+      "url": "https://forum2022.diglib.org/schedule/",
+      "path": "/schedule/",
+      "date": "2022-01-28 18:59:24"
+    },
+    {
+      "id": 113,
+      "type": "page",
+      "status": "publish",
+      "title": "Affiliated Events",
+      "url": "https://forum2022.diglib.org/affiliated-events/",
+      "path": "/affiliated-events/",
+      "date": "2022-01-28 18:59:57"
+    },
+    {
+      "id": 115,
+      "type": "page",
+      "status": "publish",
+      "title": "Learn@DLF",
+      "url": "https://forum2022.diglib.org/affiliated-events/learndlf/",
+      "path": "/affiliated-events/learndlf/",
+      "date": "2022-01-28 19:00:29"
+    },
+    {
+      "id": 117,
+      "type": "page",
+      "status": "publish",
+      "title": "Resources",
+      "url": "https://forum2022.diglib.org/resources/",
+      "path": "/resources/",
+      "date": "2022-01-28 19:00:57"
+    },
+    {
+      "id": 119,
+      "type": "page",
+      "status": "publish",
+      "title": "For Attendees",
+      "url": "https://forum2022.diglib.org/resources/for-attendees/",
+      "path": "/resources/for-attendees/",
+      "date": "2022-01-28 19:13:25"
+    },
+    {
+      "id": 121,
+      "type": "page",
+      "status": "publish",
+      "title": "For Presenters &amp; Facilitators",
+      "url": "https://forum2022.diglib.org/resources/for-presenters-moderators/",
+      "path": "/resources/for-presenters-moderators/",
+      "date": "2022-01-28 19:14:05"
+    },
+    {
+      "id": 123,
+      "type": "page",
+      "status": "publish",
+      "title": "Health Protocols",
+      "url": "https://forum2022.diglib.org/resources/health-protocols/",
+      "path": "/resources/health-protocols/",
+      "date": "2022-01-28 19:14:43"
+    },
+    {
+      "id": 125,
+      "type": "page",
+      "status": "publish",
+      "title": "Local Guide",
+      "url": "https://forum2022.diglib.org/resources/local-guide/",
+      "path": "/resources/local-guide/",
+      "date": "2022-01-28 19:15:11"
+    },
+    {
+      "id": 127,
+      "type": "page",
+      "status": "publish",
+      "title": "Frequently Asked Questions",
+      "url": "https://forum2022.diglib.org/resources/faq/",
+      "path": "/resources/faq/",
+      "date": "2022-01-28 19:15:59"
+    },
+    {
+      "id": 133,
+      "type": "page",
+      "status": "publish",
+      "title": "2022 CLIR Events Keynote Speakers",
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/",
+      "path": "/schedule/keynote-speakers/",
+      "date": "2022-01-28 19:18:15"
+    },
+    {
+      "id": 135,
+      "type": "page",
+      "status": "publish",
+      "title": "Social and Wellness Activities",
+      "url": "https://forum2022.diglib.org/schedule/social-and-wellness-activities/",
+      "path": "/schedule/social-and-wellness-activities/",
+      "date": "2022-09-07 19:30:34"
+    },
+    {
+      "id": 139,
+      "type": "page",
+      "status": "publish",
+      "title": "Sponsors",
+      "url": "https://forum2022.diglib.org/sponsorship/sponsors/",
+      "path": "/sponsorship/sponsors/",
+      "date": "2022-05-20 12:54:19"
+    },
+    {
+      "id": 141,
+      "type": "page",
+      "status": "publish",
+      "title": "Fellowships",
+      "url": "https://forum2022.diglib.org/fellowships/",
+      "path": "/fellowships/",
+      "date": "2022-01-28 19:20:43"
+    },
+    {
+      "id": 143,
+      "type": "page",
+      "status": "publish",
+      "title": "Meet the Fellows",
+      "url": "https://forum2022.diglib.org/fellowships/meet-the-fellows/",
+      "path": "/fellowships/meet-the-fellows/",
+      "date": "2022-07-21 13:12:47"
+    },
+    {
+      "id": 148,
+      "type": "page",
+      "status": "publish",
+      "title": "Register",
+      "url": "https://forum2022.diglib.org/registration/",
+      "path": "/registration/",
+      "date": "2022-01-28 19:23:47"
+    },
+    {
+      "id": 151,
+      "type": "page",
+      "status": "publish",
+      "title": "News",
+      "url": "https://forum2022.diglib.org/news/",
+      "path": "/news/",
+      "date": "2022-01-28 19:28:55"
+    },
+    {
+      "id": 461,
+      "type": "page",
+      "status": "publish",
+      "title": "Calls for Proposals for DLF Forum and Learn@DLF",
+      "url": "https://forum2022.diglib.org/forum-cfp/",
+      "path": "/forum-cfp/",
+      "date": "2022-03-01 09:00:15"
+    },
+    {
+      "id": 1492,
+      "type": "page",
+      "status": "publish",
+      "title": "Sponsorship",
+      "url": "https://forum2022.diglib.org/sponsorship/",
+      "path": "/sponsorship/",
+      "date": "2022-03-28 18:03:11"
+    },
+    {
+      "id": 2013,
+      "type": "page",
+      "status": "publish",
+      "title": "Meredith Broussard",
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/meredith-broussard/",
+      "path": "/schedule/keynote-speakers/meredith-broussard/",
+      "date": "2022-06-10 15:30:34"
+    },
+    {
+      "id": 2015,
+      "type": "page",
+      "status": "publish",
+      "title": "David Nemer",
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/david-nemer/",
+      "path": "/schedule/keynote-speakers/david-nemer/",
+      "date": "2022-06-09 18:28:42"
+    },
+    {
+      "id": 2017,
+      "type": "page",
+      "status": "publish",
+      "title": "Sara Mannheimer",
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/sara-mannheimer/",
+      "path": "/schedule/keynote-speakers/sara-mannheimer/",
+      "date": "2022-06-10 16:16:18"
+    },
+    {
+      "id": 2019,
+      "type": "page",
+      "status": "publish",
+      "title": "Dorothy Berry",
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/dorothy-berry/",
+      "path": "/schedule/keynote-speakers/dorothy-berry/",
+      "date": "2022-06-10 15:16:10"
+    },
+    {
+      "id": 2021,
+      "type": "page",
+      "status": "publish",
+      "title": "Michelle Caswell",
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/michelle-caswell/",
+      "path": "/schedule/keynote-speakers/michelle-caswell/",
+      "date": "2022-06-10 16:18:11"
+    },
+    {
+      "id": 2069,
+      "type": "page",
+      "status": "publish",
+      "title": "Conference Venue and Hotel",
+      "url": "https://forum2022.diglib.org/resources/hotel-accommodations/",
+      "path": "/resources/hotel-accommodations/",
+      "date": "2022-06-13 19:52:07"
+    },
+    {
+      "id": 2700,
+      "type": "page",
+      "status": "publish",
+      "title": "Andrew Coy",
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/andrew-coy/",
+      "path": "/schedule/keynote-speakers/andrew-coy/",
+      "date": "2022-09-09 13:23:50"
+    },
+    {
+      "id": 2931,
+      "type": "page",
+      "status": "publish",
+      "title": "Livestream and Recordings",
+      "url": "https://forum2022.diglib.org/schedule/livestream-recordings/",
+      "path": "/schedule/livestream-recordings/",
+      "date": "2022-10-07 09:25:42"
+    },
+    {
+      "id": 658,
+      "type": "post",
+      "status": "publish",
+      "title": "Calls for Proposals for 2022 CLIR Events are Now Live",
+      "url": "https://forum2022.diglib.org/2022-cfps-now-live/",
+      "path": "/2022-cfps-now-live/",
+      "date": "2022-03-01 11:00:00"
+    },
+    {
+      "id": 672,
+      "type": "post",
+      "status": "publish",
+      "title": "Plans for In-Person DLF Forum and Affiliated Events during Covid-19",
+      "url": "https://forum2022.diglib.org/plans-for-in-person-dlf-forum-and-affiliated-events-during-covid-19/",
+      "path": "/plans-for-in-person-dlf-forum-and-affiliated-events-during-covid-19/",
+      "date": "2022-03-01 11:05:24"
+    },
+    {
+      "id": 1853,
+      "type": "post",
+      "status": "publish",
+      "title": "2022 DLF Forum Fellowship Applications Open Now Through May 31",
+      "url": "https://forum2022.diglib.org/2022-dlf-forum-fellowship-applications-open-now-through-may-31/",
+      "path": "/2022-dlf-forum-fellowship-applications-open-now-through-may-31/",
+      "date": "2022-05-02 06:00:08"
+    },
+    {
+      "id": 1880,
+      "type": "post",
+      "status": "publish",
+      "title": "UPDATE: COVID-19 and CLIR’s 2022 Events (May 10)",
+      "url": "https://forum2022.diglib.org/update-covid-19-and-clirs-2022-events-may-10/",
+      "path": "/update-covid-19-and-clirs-2022-events-may-10/",
+      "date": "2022-05-10 14:44:05"
+    },
+    {
+      "id": 1895,
+      "type": "post",
+      "status": "publish",
+      "title": "Community Voting for all 2022 CLIR Events is Now Open",
+      "url": "https://forum2022.diglib.org/community-voting-for-all-2022-clir-events-is-now-open/",
+      "path": "/community-voting-for-all-2022-clir-events-is-now-open/",
+      "date": "2022-05-11 10:17:02"
+    },
+    {
+      "id": 2263,
+      "type": "post",
+      "status": "publish",
+      "title": "Registration is Now Open for CLIR’s 2022 Events, Keynotes Announced",
+      "url": "https://forum2022.diglib.org/registration-is-now-open-for-clirs-2022-events/",
+      "path": "/registration-is-now-open-for-clirs-2022-events/",
+      "date": "2022-06-21 11:00:07"
+    },
+    {
+      "id": 2399,
+      "type": "post",
+      "status": "publish",
+      "title": "Programs are Live for CLIR’s 2022 Events: DLF Forum, Learn@DLF, DigiPres, DHC Symposium",
+      "url": "https://forum2022.diglib.org/programs-are-live-for-clirs-2022-events-dlf-forum-learndlf-digipres-dhc-symposium/",
+      "path": "/programs-are-live-for-clirs-2022-events-dlf-forum-learndlf-digipres-dhc-symposium/",
+      "date": "2022-07-12 10:15:11"
+    },
+    {
+      "id": 2509,
+      "type": "post",
+      "status": "publish",
+      "title": "UPDATE: COVID-19 and CLIR’s 2022 Events (August 1)",
+      "url": "https://forum2022.diglib.org/update-covid-19-and-clirs-2022-events-august-1/",
+      "path": "/update-covid-19-and-clirs-2022-events-august-1/",
+      "date": "2022-08-01 13:00:09"
+    },
+    {
+      "id": 2514,
+      "type": "post",
+      "status": "publish",
+      "title": "A Note About CLIR’s 2022 In-Person Events",
+      "url": "https://forum2022.diglib.org/a-note-about-clirs-2022-in-person-events/",
+      "path": "/a-note-about-clirs-2022-in-person-events/",
+      "date": "2022-08-01 13:00:12"
+    },
+    {
+      "id": 2764,
+      "type": "post",
+      "status": "publish",
+      "title": "Update: COVID-19 and CLIR's 2022 Events (September 13)",
+      "url": "https://forum2022.diglib.org/update-covid-19-and-clirs-2022-events-september-13/",
+      "path": "/update-covid-19-and-clirs-2022-events-september-13/",
+      "date": "2022-09-13 09:00:09"
+    },
+    {
+      "id": 2853,
+      "type": "post",
+      "status": "publish",
+      "title": "Update: COVID-19 and CLIR's 2022 Events (September 26)",
+      "url": "https://forum2022.diglib.org/update-covid-19-and-clirs-2022-events-september-26/",
+      "path": "/update-covid-19-and-clirs-2022-events-september-26/",
+      "date": "2022-09-26 09:35:31"
+    }
+  ],
+  "excluded": [
+    {
+      "id": 2,
+      "type": "page",
+      "status": "publish",
+      "title": "Sample Page",
+      "url": "https://forum2022.diglib.org/sample-page/",
+      "path": "/sample-page/",
+      "date": "2021-11-05 20:08:12"
+    },
+    {
+      "id": 129,
+      "type": "page",
+      "status": "publish",
+      "title": "OLD-Sponsorship",
+      "url": "https://forum2022.diglib.org/old-sponsorship/",
+      "path": "/old-sponsorship/",
+      "date": "2022-01-28 19:16:33"
+    },
+    {
+      "id": 131,
+      "type": "page",
+      "status": "publish",
+      "title": "Exhibitors",
+      "url": "https://forum2022.diglib.org/old-sponsorship/exhibitors/",
+      "path": "/old-sponsorship/exhibitors/",
+      "date": "2022-01-28 19:17:30"
+    },
+    {
+      "id": 884,
+      "type": "page",
+      "status": "publish",
+      "title": "scratch",
+      "url": "https://forum2022.diglib.org/scratch/",
+      "path": "/scratch/",
+      "date": "2022-04-19 17:24:20"
+    },
+    {
+      "id": 145,
+      "type": "page",
+      "status": "publish",
+      "title": "Calls for Proposals",
+      "url": "https://forum2022.diglib.org/calls-for-proposals/",
+      "path": "/calls-for-proposals/",
+      "date": "2022-01-28 19:21:58"
+    },
+    {
+      "id": 271,
+      "type": "page",
+      "status": "publish",
+      "title": "Test Page",
+      "url": "https://forum2022.diglib.org/test-page/",
+      "path": "/test-page/",
+      "date": "2022-01-31 22:45:53"
+    },
+    {
+      "id": 566,
+      "type": "page",
+      "status": "publish",
+      "title": "Past Sponsors",
+      "url": "https://forum2022.diglib.org/sponsorship/past-sponsors/",
+      "path": "/sponsorship/past-sponsors/",
+      "date": "2022-02-17 22:38:57"
+    }
+  ],
+  "captures": [
+    {
+      "url": "https://forum2022.diglib.org/",
+      "path": "/",
+      "sourceHash": "8d0c398386beb6b24719cb8f3c9ad42f06e58aef66190afef243c43cfd2d44e6"
+    },
+    {
+      "url": "https://forum2022.diglib.org/about/",
+      "path": "/about/",
+      "sourceHash": "34adce5b7707705fd6c289907356e1aa82009636a41a2d29017ed3d7b9286d83"
+    },
+    {
+      "url": "https://forum2022.diglib.org/news/",
+      "path": "/news/",
+      "sourceHash": "64e1d5bcd37d2c02297d0746063accdd3274ca216d4b3b7b98c4711b160a73ab"
+    },
+    {
+      "url": "https://forum2022.diglib.org/about/code-of-conduct/",
+      "path": "/about/code-of-conduct/",
+      "sourceHash": "ea8794327800ebd0e1828219ae5a451dff25b89de0b3d742be7b7c2f88751db1"
+    },
+    {
+      "url": "https://forum2022.diglib.org/about/land-acknowledgement/",
+      "path": "/about/land-acknowledgement/",
+      "sourceHash": "9d60d2c32a04fd5159e1376b0961210a69628e9897a58d3a01c3433db0ad2e18"
+    },
+    {
+      "url": "https://forum2022.diglib.org/about/team/",
+      "path": "/about/team/",
+      "sourceHash": "1a65dfd4b50c7c1f9a7064c0f0261e7b1741651a61c1f98671cbb0d70603b455"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/",
+      "path": "/schedule/",
+      "sourceHash": "80bde7e58f8c33da5ba362f37c90c0d0ffa2299b82230520da3a6bb1e6122174"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/",
+      "path": "/schedule/keynote-speakers/",
+      "sourceHash": "128d41fcfb9e536910e6a51140190b224edbd85fcab2f24504713603129c54b4"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/social-and-wellness-activities/",
+      "path": "/schedule/social-and-wellness-activities/",
+      "sourceHash": "99dc511a2692fadc1b59a4f4a443c6a9eee44845913330f832ff7e45a79b4a98"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/livestream-recordings/",
+      "path": "/schedule/livestream-recordings/",
+      "sourceHash": "4f8315ba59095331919ba881628fca3d8ea7767c204b6196e462f038d0df7b41"
+    },
+    {
+      "url": "https://forum2022.diglib.org/affiliated-events/",
+      "path": "/affiliated-events/",
+      "sourceHash": "fdff9c7168a8ed849dee069f4567c283314ee486df1ed804bd79e2881b6b7fc4"
+    },
+    {
+      "url": "https://forum2022.diglib.org/affiliated-events/learndlf/",
+      "path": "/affiliated-events/learndlf/",
+      "sourceHash": "39eaf55b892cd0351d2cdd10f236b03e28aa187cd5c7c576653be0e9c1f9ec3f"
+    },
+    {
+      "url": "https://forum2022.diglib.org/resources/",
+      "path": "/resources/",
+      "sourceHash": "9559685f7d87c4db113c0670496584c3b6023e8c833bb45f17c9128f401ce948"
+    },
+    {
+      "url": "https://forum2022.diglib.org/resources/hotel-accommodations/",
+      "path": "/resources/hotel-accommodations/",
+      "sourceHash": "bd1bb32fc5a565f2ae0af3c7b71f336523a63bde332ac08e1b946c50b54a816e"
+    },
+    {
+      "url": "https://forum2022.diglib.org/resources/for-attendees/",
+      "path": "/resources/for-attendees/",
+      "sourceHash": "ab487e87b4a03172945b157761e3650771cd47f9f916ea679c4f6051f8d21b8f"
+    },
+    {
+      "url": "https://forum2022.diglib.org/resources/for-presenters-moderators/",
+      "path": "/resources/for-presenters-moderators/",
+      "sourceHash": "e2a649d05936c966ac8a70a2e80e8c10af78ec7061f85de874ed1c499351d39f"
+    },
+    {
+      "url": "https://forum2022.diglib.org/resources/health-protocols/",
+      "path": "/resources/health-protocols/",
+      "sourceHash": "526f91d2b6ebeb4f2f64f1e673d8e933daf68062367c9bed7300a6620b3e279f"
+    },
+    {
+      "url": "https://forum2022.diglib.org/resources/local-guide/",
+      "path": "/resources/local-guide/",
+      "sourceHash": "bc73915aa3675354ae4ebbf8fa46f1661fae4bc92882e5109c05149f8179faf4"
+    },
+    {
+      "url": "https://forum2022.diglib.org/resources/faq/",
+      "path": "/resources/faq/",
+      "sourceHash": "baa6659b5cca0d4a95c1b99490fb042692e5bd78a6bb1e3805faa2f0ebe7c558"
+    },
+    {
+      "url": "https://forum2022.diglib.org/sponsorship/sponsors/",
+      "path": "/sponsorship/sponsors/",
+      "sourceHash": "13fd03b2f87dcbe223494a3072d4e56e113ba82c5e410457d3ef4f7d2ac483cd"
+    },
+    {
+      "url": "https://forum2022.diglib.org/sponsorship/",
+      "path": "/sponsorship/",
+      "sourceHash": "fb9d65d7ee60b05b1561947a26d39297446331ee02646fdd8ceb5cdf8965407e"
+    },
+    {
+      "url": "https://forum2022.diglib.org/fellowships/",
+      "path": "/fellowships/",
+      "sourceHash": "13d069ec58aef07fd93ee7cbc2ef6413cde2a33da84b29b1a95adba6acfcdef1"
+    },
+    {
+      "url": "https://forum2022.diglib.org/fellowships/meet-the-fellows/",
+      "path": "/fellowships/meet-the-fellows/",
+      "sourceHash": "6c9c17d2bb44ebd3dcb65e4e551a854844be9bae5cf7577cff96b451e83932a0"
+    },
+    {
+      "url": "https://forum2022.diglib.org/update-covid-19-and-clirs-2022-events-september-26/",
+      "path": "/update-covid-19-and-clirs-2022-events-september-26/",
+      "sourceHash": "460dc673e029ce925bb80685b273e4c7b0c208eaf2f4a72176833d284c6f6de8"
+    },
+    {
+      "url": "https://forum2022.diglib.org/update-covid-19-and-clirs-2022-events-september-13/",
+      "path": "/update-covid-19-and-clirs-2022-events-september-13/",
+      "sourceHash": "4f8a1d364596aad50f3c593fe72bd61351ba0bc7732efd2cb0e371ca987ef61d"
+    },
+    {
+      "url": "https://forum2022.diglib.org/a-note-about-clirs-2022-in-person-events/",
+      "path": "/a-note-about-clirs-2022-in-person-events/",
+      "sourceHash": "ae01980a512364fd57d9a203a431a62d14af2aebbd99b3e1b0685b1fa3b0da9d"
+    },
+    {
+      "url": "https://forum2022.diglib.org/update-covid-19-and-clirs-2022-events-august-1/",
+      "path": "/update-covid-19-and-clirs-2022-events-august-1/",
+      "sourceHash": "9a2e87cb44b0a92c71f2dfa825abca552a862cf880599f43832854afa6febdea"
+    },
+    {
+      "url": "https://forum2022.diglib.org/programs-are-live-for-clirs-2022-events-dlf-forum-learndlf-digipres-dhc-symposium/",
+      "path": "/programs-are-live-for-clirs-2022-events-dlf-forum-learndlf-digipres-dhc-symposium/",
+      "sourceHash": "ec1daf3c8cadc9cb17d3ee09925340310b9cf947b0e80927f799522e3f48e075"
+    },
+    {
+      "url": "https://forum2022.diglib.org/registration-is-now-open-for-clirs-2022-events/",
+      "path": "/registration-is-now-open-for-clirs-2022-events/",
+      "sourceHash": "d78d89c92c458b7deaec2b53e1c94962b394b4c4faa474b3f1302aecb7a9b789"
+    },
+    {
+      "url": "https://forum2022.diglib.org/community-voting-for-all-2022-clir-events-is-now-open/",
+      "path": "/community-voting-for-all-2022-clir-events-is-now-open/",
+      "sourceHash": "449955e31c4fe9f7a531f6052a41f71e318935b2f988a1804899b3c16a0a0779"
+    },
+    {
+      "url": "https://forum2022.diglib.org/update-covid-19-and-clirs-2022-events-may-10/",
+      "path": "/update-covid-19-and-clirs-2022-events-may-10/",
+      "sourceHash": "73aa9461ccbdd780280e5791bef85b6b2afeb8f95e49366e1f774e2df5950296"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022-dlf-forum-fellowship-applications-open-now-through-may-31/",
+      "path": "/2022-dlf-forum-fellowship-applications-open-now-through-may-31/",
+      "sourceHash": "cd124005b97a2b3ba7ae6ed00d59c6191344d00c6fb2981a436101255c1903bd"
+    },
+    {
+      "url": "https://forum2022.diglib.org/news/2/",
+      "path": "/news/2/",
+      "sourceHash": "6227328735897b6d570fb075f49522024519855808026e57a54386430237aedb"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/meredith-broussard/",
+      "path": "/schedule/keynote-speakers/meredith-broussard/",
+      "sourceHash": "e44e03389b417d96bca9e4266b5e2a06f92e081c0cd08ecc8fa146e77286f28f"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/david-nemer/",
+      "path": "/schedule/keynote-speakers/david-nemer/",
+      "sourceHash": "dfd78a3fe6c526141349ea0dc8933fa85ae2f386a1fb4ffb680c5510d1b6ddce"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/sara-mannheimer/",
+      "path": "/schedule/keynote-speakers/sara-mannheimer/",
+      "sourceHash": "1baf25f59c70c1dd0f8ccdd9aa50ee60b1beb69a57f558452bad5892e992ead5"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/andrew-coy/",
+      "path": "/schedule/keynote-speakers/andrew-coy/",
+      "sourceHash": "2f048af49098e045916f0a3fbca1aa37798f2d5c0b5996efdeb6b68b47f2495e"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/dorothy-berry/",
+      "path": "/schedule/keynote-speakers/dorothy-berry/",
+      "sourceHash": "78e85089d5228198b09b29ba231602e924a4a1525667b9d4b57546a929ea2da6"
+    },
+    {
+      "url": "https://forum2022.diglib.org/schedule/keynote-speakers/michelle-caswell/",
+      "path": "/schedule/keynote-speakers/michelle-caswell/",
+      "sourceHash": "e9e9db78185556b57bd3f1d305ee41830a73f6dd5430e3cbd4537303d7ecf608"
+    },
+    {
+      "url": "https://forum2022.diglib.org/author/areich/",
+      "path": "/author/areich/",
+      "sourceHash": "0031799938e5547f272bdb80c95e5032f2ce3b3b1af0314b7c16f43f86f399dc"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/09/26/",
+      "path": "/2022/09/26/",
+      "sourceHash": "d730ae0051857596a6caf6e01712582d5ad03c18a845d8b89c59c4a32efce8c1"
+    },
+    {
+      "url": "https://forum2022.diglib.org/author/gschechter/",
+      "path": "/author/gschechter/",
+      "sourceHash": "be8f60920e319a4f58d560419df4ff14bf6d14c8a0fe50a7f4f4bcd3870d8db7"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/09/13/",
+      "path": "/2022/09/13/",
+      "sourceHash": "a9858fb2f143b96d347b898508c37e1067c6bb662a1a17cd3b2865953a0444c6"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/08/01/",
+      "path": "/2022/08/01/",
+      "sourceHash": "226f24250a7b2a97bd3f40d139e48ebe5b18dee1dc8cd4f1882a7bdd4317d754"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/07/12/",
+      "path": "/2022/07/12/",
+      "sourceHash": "f4e7e7bd4fd58fc499303c7b0b2f0126f2b50cd0e3f732469d4f19b88e29b167"
+    },
+    {
+      "url": "https://forum2022.diglib.org/registration/",
+      "path": "/registration/",
+      "sourceHash": "a1fab4c5bdc701ba08689f78bcb0538a66c26461426df7342156b5ca165478f0"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/06/21/",
+      "path": "/2022/06/21/",
+      "sourceHash": "5b60a16628a3ce38d39c8a84b9a93fedf5bd1c8159988b8c0a6ace3efbe33a2b"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/05/11/",
+      "path": "/2022/05/11/",
+      "sourceHash": "ec6942b8ca99abcc27229c626ca9fb5485cd1e3544c1ad7c1d001f394f3af6a1"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/05/10/",
+      "path": "/2022/05/10/",
+      "sourceHash": "a244908ed4041de42abad37314a9b88e6c5888dde13c022af4fcc90bd9acbd7d"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/05/02/",
+      "path": "/2022/05/02/",
+      "sourceHash": "4fd7cfe42012ffbeaed769cd373209b76c0ded8f6421562b65d5c1f85c97b2f6"
+    },
+    {
+      "url": "https://forum2022.diglib.org/plans-for-in-person-dlf-forum-and-affiliated-events-during-covid-19/",
+      "path": "/plans-for-in-person-dlf-forum-and-affiliated-events-during-covid-19/",
+      "sourceHash": "40974bcf6a884d922ea553206739346d6abfd8dd569d76fcf87deea912da0c2a"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022-cfps-now-live/",
+      "path": "/2022-cfps-now-live/",
+      "sourceHash": "9aeaa4af9cfa77822318e053826b881a89099e8f003d41ce4b9050e8851a7b98"
+    },
+    {
+      "url": "https://forum2022.diglib.org/2022/03/01/",
+      "path": "/2022/03/01/",
+      "sourceHash": "f4c395ccfc28aeeb12b3bcebdea983dc141c644fdbe8090a5f29e61bccaeb25c"
+    },
+    {
+      "url": "https://forum2022.diglib.org/forum-cfp/",
+      "path": "/forum-cfp/",
+      "sourceHash": "e2d36969344e6c27d13ead23370003420b881735dd28aaf511273ae2b7548e4c"
+    }
+  ],
+  "issues": [
+    {
+      "url": "https://forum2022.diglib.org/affiliated-events/learnatdlf",
+      "status": 404,
+      "reason": "Dead source link"
+    }
+  ]
+}
