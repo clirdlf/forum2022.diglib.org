@@ -4,7 +4,7 @@
 .archive-static .elementor-widget-video video {width:100%;height:100%;object-fit:contain}
 .archive-static .elementor-widget-animated-headline .elementor-headline-dynamic-text {opacity:1}
 .archive-static .elementor-headline-dynamic-wrapper {overflow:visible}
-.archive-scroll-top {position:fixed;right:20px;bottom:20px;z-index:100;width:36px;height:36px;padding:0;border:0;background:#2166b3;color:#ef8533;cursor:pointer;display:none}
+.archive-scroll-top {position:fixed;right:20px;bottom:20px;z-index:100;width:36px;height:36px;padding:0;border:0;background:#2166b3;color:#fff;cursor:pointer;display:none}
 .archive-scroll-top.visible {display:block}
 :focus-visible {outline:2px solid #2166b3;outline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}
@@ -34,3 +34,18 @@
 /* Long headings and URLs overflowed narrow screens in the source theme. */
 @media(max-width:767px){.archive-static main{overflow-wrap:anywhere}.archive-static .elementor-heading-title,.archive-static .elementor-headline{overflow-wrap:anywhere;white-space:normal}}
 @media(max-width:767px){.archive-static h1.elementor-heading-title{font-size:clamp(28px,9vw,40px)!important;line-height:1.2}}
+
+/* Preserve the palette while making interactive symbols and focus visible. */
+.archive-static footer .elementor-social-icon {background-color:#138775!important;color:#fff!important}
+.archive-static .primary-menu-ul .nv-active>.wrap>a,.archive-static .primary-menu-ul a:hover {color:#b52d50!important}
+.archive-static footer :focus-visible {outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 2px #272626}
+.archive-static .archive-scroll-top:focus-visible {outline-color:#272626}
+.archive-program {padding:40px 20px;max-width:1200px;margin:auto}
+.archive-program nav ul {display:flex;gap:16px;flex-wrap:wrap;list-style:none;padding:0}
+.archive-program details {padding:16px;margin:12px 0;border:1px solid #bbb;border-radius:4px}
+.archive-program summary {cursor:pointer;font-weight:700;font-size:20px;line-height:1.5}
+.archive-program .session-meta {margin:12px 0}
+.archive-program .session-description {overflow-wrap:anywhere}
+.archive-program .session-description h3,.archive-program .session-description h4 {font-size:20px}
+.archive-program-note {padding:24px;background:#f0f5f6;border-left:4px solid #2166b3;margin:24px 0}
+@media print {.archive-program nav,.archive-program-downloads,header,footer{display:none}.archive-program details> :not(summary){display:block!important}.archive-program details{break-inside:avoid}}

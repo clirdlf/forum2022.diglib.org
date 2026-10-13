@@ -1,6 +1,7 @@
 import {load} from 'cheerio';
-import {writeFile,mkdir,rm} from 'node:fs/promises';
-import {join} from 'node:path';
+import {writeFile,mkdir,rm,mkdtemp,cp} from 'node:fs/promises';
+import {join,dirname,resolve} from 'node:path';
+import {publishStaged} from './publish.mjs';
 import {parseExport} from './wxr.mjs';
 import {crawlPublicSite} from './crawl.mjs';
 import {normalizePage} from './normalize.mjs';
@@ -18,19 +19,28 @@ export async function importSite({origin,xml,fetchPage,fetchAsset,cacheDir,archi
  if(inventoryOnly){await writeFile(join(archiveDir,'inventory.json'),JSON.stringify(manifest,null,2)+'\n');return manifest;}
  const urls=new Set(result.captures.flatMap(c=>[...collectAssetUrls(c.html,c.url)]));
  for(const capture of result.captures){const $=load(capture.html);$('script[src]').each((_,e)=>{const url=$(e).attr('src');if(url.includes('/swiper/')&&url.includes('.js'))urls.add(new URL(url,capture.url).href);});}
- const assets=await localizeAssets({urls,fetchAsset,outputDir:join(sourceDir,'assets/vendor'),cacheDir:assetCache});
+ const stage=await mkdtemp(join(dirname(resolve(archiveDir)),'.archive-import-'));
+ const stagedArchive=join(stage,'archive'),stagedSource=join(stage,'src');
+ try {
+ await cp(archiveDir,stagedArchive,{recursive:true});
+ const assets=await localizeAssets({urls,fetchAsset,outputDir:join(stagedSource,'assets/vendor'),cacheDir:assetCache});
  manifest.assetMap=Object.fromEntries(Object.entries(assets.assetMap).sort(([a],[b])=>a.localeCompare(b)));
  manifest.issues.push(...assets.issues);
  const normalized=result.captures.map(c=>normalizePage(c,result.included.find(r=>r.path===c.path)||null,manifest.assetMap));
- await mkdir(join(archiveDir,'bodies'),{recursive:true});await mkdir(join(sourceDir,'_includes/partials'),{recursive:true});
+ await mkdir(join(stagedArchive,'bodies'),{recursive:true});await mkdir(join(stagedSource,'_includes/partials'),{recursive:true});
  for(const entry of normalized){
-  await writeFile(join(archiveDir,'bodies',entry.page.bodyFile),entry.bodyHtml);
+  await writeFile(join(stagedArchive,'bodies',entry.page.bodyFile),entry.bodyHtml);
   manifest.issues.push(...entry.issues);
-  if(entry.page.path==='/'){await writeFile(join(sourceDir,'_includes/partials/header.njk'),entry.chrome.headerHtml);await writeFile(join(sourceDir,'_includes/partials/footer.njk'),entry.chrome.footerHtml);}
+  if(entry.page.path==='/'){await writeFile(join(stagedSource,'_includes/partials/header.njk'),entry.chrome.headerHtml);await writeFile(join(stagedSource,'_includes/partials/footer.njk'),entry.chrome.footerHtml);}
  }
- // Commit the build's manifests only after required fetches and normalization succeed.
- await writeFile(join(archiveDir,'pages.json'),JSON.stringify(normalized.map(r=>r.page),null,2)+'\n');
- await writeFile(join(archiveDir,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+ // Stage the complete import before replacing any build input.
+ await writeFile(join(stagedArchive,'pages.json'),JSON.stringify(normalized.map(r=>r.page),null,2)+'\n');
+ await writeFile(join(stagedArchive,'manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+ await publishStaged([
+  {staged:stagedArchive,target:archiveDir},
+  ...['assets/vendor','_includes/partials/header.njk','_includes/partials/footer.njk'].map(path=>({staged:join(stagedSource,path),target:join(sourceDir,path)})),
+ ]);
  console.log(`Localized ${Object.keys(manifest.assetMap).length} assets; prepared ${normalized.length} Eleventy records.`);
  return manifest;
+ } finally { await rm(stage,{recursive:true,force:true}); }
 }

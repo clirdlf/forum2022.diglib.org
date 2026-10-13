@@ -1,0 +1,30 @@
+---
+permalink: /schedule/program/
+layout: layouts/base.njk
+entry:
+  path: /schedule/program/
+  title: Archived program
+  bodyClasses: "page neve elementor-default elementor-kit-4"
+---
+<main id="content" class="neve-main" tabindex="-1">
+<section class="archive-program">
+<h1>2022 Events Program</h1>
+<p>The DLF Forum and affiliated events took place October 9–13, 2022. This archived program includes {{ program.sessions.length }} sessions. All times are Eastern Daylight Time (UTC−4).</p>
+<p class="archive-program-downloads"><a href="/schedule/">Back to the events schedule</a> · <a href="/schedule/program.json" download>Download program data (JSON)</a> · <a href="{{ program.source | escape }}">View the original Sched program</a></p>
+<nav aria-label="Program days"><ul>{% for day in program.days %}<li><a href="#day-{{ day.date }}">{{ day.label | escape }}</a></li>{% endfor %}</ul></nav>
+{% for day in program.days %}
+<section aria-labelledby="day-{{ day.date }}">
+<h2 id="day-{{ day.date }}">{{ day.label | escape }}, 2022</h2>
+{% for session in day.sessions %}
+<details id="session-{{ session.id | escape }}">
+<summary>{{ session.time | escape }} — {{ session.title | escape }}</summary>
+<p class="session-meta">{{ session.timeAndPlace | escape }}{% if session.type %}<br>{{ session.type | escape }}{% endif %}</p>
+{% if session.speakers.length %}<p><strong>Speakers:</strong> {{ session.speakers | join(", ") | escape }}</p>{% endif %}
+<div class="session-description">{{ session.descriptionHtml | safe }}</div>
+<p><a href="{{ session.url | escape }}">View {{ session.title | escape }} on Sched</a></p>
+</details>
+{% endfor %}
+</section>
+{% endfor %}
+</section>
+</main>

@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+const {auditHtml=async()=>[]}=await import('../scripts/check-accessibility.mjs').catch(()=>({}));
+test('accessibility checks reject unnamed links and frames',async()=>{const violations=await auditHtml('<!DOCTYPE html><html lang="en"><head><title>Test</title></head><body><main><h1>Test</h1><a href="/about/"><i></i></a><iframe src="https://example.org/" title=""></iframe></main></body></html>');assert.ok(violations.some(v=>v.id==='link-name'));assert.ok(violations.some(v=>v.id==='frame-title'));});
+test('a labeled native disclosure and link pass accessibility semantics checks',async()=>{assert.deepEqual(await auditHtml('<!DOCTYPE html><html lang="en"><head><title>Test</title></head><body><main><h1>Test</h1><details><summary>Session details</summary><a href="/about/">About the event</a></details></main></body></html>'),[]);});

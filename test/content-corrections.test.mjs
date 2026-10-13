@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+const {applyCorrections=(html)=>html}=await import('../scripts/lib/content-corrections.mjs').catch(()=>({}));
+test('content corrections are reapplied to a fresh imported body',()=>{const corrections={'/about/':[{find:'<p>Incorrect name</p>',replace:'<p>Correct name</p>'}]};assert.equal(applyCorrections('<main><p>Incorrect name</p></main>','/about/',corrections),'<main><p>Correct name</p></main>');assert.equal(applyCorrections('<main><p>Other page</p></main>','/elsewhere/',corrections),'<main><p>Other page</p></main>');});
+test('a stale correction fails explicitly when its original content changes',()=>{assert.throws(()=>applyCorrections('<p>Changed upstream</p>','/about/',{'/about/':[{find:'Incorrect name',replace:'Correct name'}]}),/correction.*\/about\//i);});
