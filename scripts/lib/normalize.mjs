@@ -7,7 +7,8 @@ export function normalizePage(capture,record,assetMap){
  $('#wpadminbar,#wp-toolbar,#pojo-a11y-toolbar,#pojo-a11y-skip-content,[class*="wpa-toolbar"],link[rel="https://api.w.org/"],link[rel="EditURI"]').remove();
  $('link').each((_,e)=>{const rel=$(e).attr('rel');if(!['stylesheet','icon','apple-touch-icon'].includes(rel)||excludedAsset($(e).attr('href')||''))$(e).remove();});
  $('style').each((_,e)=>{if(/wpa|emoji/i.test($(e).attr('id')||''))$(e).remove();else $(e).html(rewriteCss($(e).html()||'',capture.url,assetMap));});
- $('meta').each((_,e)=>{if($(e).attr('content'))$(e).attr('content',rewrite($(e).attr('content')));});
+ $('meta[name="msapplication-TileImage"]').remove();
+ $('meta[property^="og:"],meta[name="twitter:image"]').each((_,e)=>{if(/^(og:(url|image|video|audio)(:url)?|twitter:image)$/.test($(e).attr('property')||$(e).attr('name')||'')&&$(e).attr('content'))$(e).attr('content',rewrite($(e).attr('content')));});
  $('a[href*="/cdn-cgi/l/email-protection"],[data-cfemail]').each((_,e)=>{const hex=$(e).attr('data-cfemail')||($(e).attr('href')||'').split('#')[1];if(hex&&/^[a-f0-9]+$/i.test(hex)){const email=decodeEmail(hex);if(e.name==='a'){$(e).attr('href','mailto:'+email);if($(e).hasClass('__cf_email__'))$(e).text(email);}else $(e).replaceWith(email);$(e).removeAttr('data-cfemail');}});
  $('*').each((_,e)=>{
   for(const name of Object.keys(e.attribs||{}))if(/^on/i.test(name))$(e).removeAttr(name);

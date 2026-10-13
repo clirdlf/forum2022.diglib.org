@@ -1,5 +1,5 @@
 import {load} from 'cheerio';import postcss from 'postcss';import valueParser from 'postcss-value-parser';
-import {mkdir,readFile,writeFile} from 'node:fs/promises';import {basename,join} from 'node:path';import {hash} from './crawl.mjs';
+import {mkdir,readFile,writeFile,rm} from 'node:fs/promises';import {basename,join} from 'node:path';import {hash} from './crawl.mjs';
 export const excludedAsset = url => /pojo-accessibility|wp-accessibility|googletagmanager|google-analytics|monsterinsights|ivory-search/i.test(url);
 export function resolveAsset(value,base){if(!value||/^(?:data:|#|mailto:|tel:|javascript:)/i.test(value))return null;try{const u=new URL(value,base);u.hash='';return /^https?:$/.test(u.protocol)&&!excludedAsset(u.href)?u.href:null;}catch{return null;}}
 function visitCss(css,base,callback){
@@ -15,16 +15,24 @@ export function collectAssetUrls(html,pageUrl){const $=load(html);const urls=new
  $('[style]').each((_,e)=>visitCss('x{'+$(e).attr('style')+'}',pageUrl,u=>{urls.add(u);}));
  return urls;
 }
+function validateAsset(r,url){
+ const pathname=new URL(url).pathname;const type=(r.contentType||'').split(';')[0].trim().toLowerCase();const css=/\.css$/i.test(pathname)||type==='text/css';
+ const sample=r.bytes?.subarray(0,2000).toString()||'';
+ const expected=css?/^text\/css$/:/\.(png|jpe?g|gif|webp|svg|ico|avif)$/i.test(pathname)?/^image\//:/\.(woff2?|ttf|otf|eot)$/i.test(pathname)?/^(font\/|application\/(font|x-font|vnd.ms-fontobject))/:/\.pdf$/i.test(pathname)?/^application\/pdf$/:/\.(mp4|webm)$/i.test(pathname)?/^video\//:/\.(mp3|ogg|wav)$/i.test(pathname)?/^audio\//:/\.js$/i.test(pathname)?/^(application|text)\/javascript$/:null;
+ if(r.status!==200||!r.bytes?.length||/html|json/.test(type)||/challenge-platform|<title>\s*(Just a moment|Attention Required)|^\s*(?:<!doctype html|<html)/i.test(sample)||(expected&&!expected.test(type)&&!(type==='application/octet-stream'&&!css)))throw Error(`Invalid asset response/type: ${url} (${r.status} ${r.contentType})`);
+ if(css)visitCss(r.bytes.toString('utf8'),url,()=>{});
+ return css;
+}
 export async function localizeAssets({urls,fetchAsset,outputDir,cacheDir}){
  await mkdir(outputDir,{recursive:true});if(cacheDir)await mkdir(cacheDir,{recursive:true});
  const pending=[...urls];const seen=new Set();const assetMap={};const styles=[];const issues=[];let count=0;
  while(pending.length){const batch=pending.splice(0,6).filter(u=>!seen.has(u));batch.forEach(u=>seen.add(u));
   await Promise.all(batch.map(async url=>{
    let r;const cache=cacheDir&&join(cacheDir,hash(url)+'.json');
-   try{if(!cache)throw Error('no cache');const saved=JSON.parse(await readFile(cache,'utf8'));r={...saved,bytes:Buffer.from(saved.base64,'base64')};}catch{r=await fetchAsset(url);}
-   const pathname=new URL(url).pathname;const css=/\.css$/i.test(pathname)||r.contentType?.includes('text/css');
-   if(r.status!==200||!r.bytes?.length||(!css&&r.contentType?.includes('text/html'))||/challenge-platform|<title>\s*(Just a moment|Attention Required)/i.test(r.bytes.subarray(0,2000).toString()))throw Error(`Invalid asset response/type: ${url} (${r.status} ${r.contentType})`);
+   try{if(!cache)throw Error('no cache');const saved=JSON.parse(await readFile(cache,'utf8'));r={...saved,bytes:Buffer.from(saved.base64,'base64')};validateAsset(r,url);}catch{if(cache)await rm(cache,{force:true});r=await fetchAsset(url);}
+   const css=validateAsset(r,url);
    if(cache)await writeFile(cache,JSON.stringify({status:r.status,contentType:r.contentType,base64:r.bytes.toString('base64')}));
+   const pathname=new URL(url).pathname;
    let name=basename(decodeURIComponent(pathname)).replace(/[^a-zA-Z0-9._-]/g,'_')||'asset';if(css&&!name.endsWith('.css'))name+='.css';
    const file=hash(url).slice(0,12)+'-'+name;assetMap[url]='/assets/vendor/'+file;
    if(css){const source=r.bytes.toString('utf8');styles.push({url,file,source});visitCss(source,url,u=>{if(!seen.has(u))pending.push(u);});}else await writeFile(join(outputDir,file),r.bytes);

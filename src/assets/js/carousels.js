@@ -13,7 +13,7 @@ export function init(root=document){
   });
   if(settings.autoplay==='yes'){const pause=document.createElement('button');pause.type='button';pause.className='archive-carousel-pause';pause.textContent=motion.matches?'Play slideshow':'Pause slideshow';let paused=motion.matches;
    pause.addEventListener('click',()=>{paused=!paused;if(paused)swiper.autoplay.stop();else{swiper.params.autoplay={delay:Number(settings.autoplay_speed||5000),disableOnInteraction:true,pauseOnMouseEnter:true};swiper.autoplay.start();}pause.textContent=paused?'Play slideshow':'Pause slideshow';});widget.append(pause);
-   widget.addEventListener('focusin',()=>{swiper.autoplay?.stop();paused=true;pause.textContent='Play slideshow';});motion.addEventListener('change',e=>{if(e.matches){swiper.autoplay?.stop();swiper.params.speed=0;paused=true;pause.textContent='Play slideshow';}});
+   widget.addEventListener('focusin',e=>{if(e.target===pause)return;swiper.autoplay?.stop();paused=true;pause.textContent='Play slideshow';});motion.addEventListener('change',e=>{if(e.matches){swiper.autoplay?.stop();swiper.params.speed=0;paused=true;pause.textContent='Play slideshow';}});
   }
  });
 }

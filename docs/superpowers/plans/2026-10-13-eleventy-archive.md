@@ -1,6 +1,6 @@
 # DLF Forum 2022 Archive Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Build a faithful, locally self-contained Eleventy archive of the reachable public DLF Forum 2022 site, ready for GitHub Pages at its existing domain.
 
@@ -61,12 +61,12 @@
 
 **Interfaces:** `parseExport(xml: string): ExportRecord[]`; `crawlPublicSite({ origin, records, fetchPage, cacheDir }): Promise<{ captures: PageCapture[], included: ExportRecord[], excluded: ExportRecord[], issues: object[] }>`; injectable `fetchPage(url): Promise<{ status, contentType, body, finalUrl }>` for fixture tests.
 
-- [ ] Add fixtures and failing tests: XML CDATA and escaped titles survive parsing; private/draft/statistics records cannot enter public content; a fixture homepage links to news page 1, page 2, an older post, and a nested page, and all are discovered while an unlinked test page is excluded.
-- [ ] Run `node --test test/wxr.test.mjs test/crawl.test.mjs`; confirm failures establish the missing importer behavior.
-- [ ] Implement parsing and traversal. Start from `/`, follow same-origin public HTML links, resolve query pagination and canonical paths, classify backend endpoints, and reuse cached anonymous captures. Keep provenance hashes. Use validated public requests without browser cookies; the initial audit found curl succeeds where Python urllib returned 403, so provide a curl transport if native fetch is rejected.
-- [ ] Test rejection of a challenge/error response and a resumable partial download failure; only validated responses may populate the cache.
-- [ ] Run importer tests to PASS, run an inventory import against the live site, compare with the spec's 41-record baseline, and document any newly discovered routes.
-- [ ] Commit the importer and inventory with `feat: inventory reachable WordPress content`.
+- [x] Add fixtures and failing tests: XML CDATA and escaped titles survive parsing; private/draft/statistics records cannot enter public content; a fixture homepage links to news page 1, page 2, an older post, and a nested page, and all are discovered while an unlinked test page is excluded.
+- [x] Run `node --test test/wxr.test.mjs test/crawl.test.mjs`; confirm failures establish the missing importer behavior.
+- [x] Implement parsing and traversal. Start from `/`, follow same-origin public HTML links, resolve query pagination and canonical paths, classify backend endpoints, and reuse cached anonymous captures. Keep provenance hashes. Use validated public requests without browser cookies; the initial audit found curl succeeds where Python urllib returned 403, so provide a curl transport if native fetch is rejected.
+- [x] Test rejection of a challenge/error response and a resumable partial download failure; only validated responses may populate the cache.
+- [x] Run importer tests to PASS, run an inventory import against the live site, compare with the spec's 41-record baseline, and document any newly discovered routes.
+- [x] Commit the importer and inventory with `feat: inventory reachable WordPress content`.
 
 ### Task 2: Complete local asset capture
 
@@ -74,11 +74,11 @@
 
 **Interfaces:** `collectAssetUrls(html: string, pageUrl: string): Set<string>`; `localizeAssets({ urls, fetchAsset, outputDir }): Promise<{ assetMap: AssetMap, issues: object[] }>`; `rewriteCss(css: string, sourceUrl: string, assetMap: AssetMap): string`. `fetchAsset` returns status, content type, and bytes.
 
-- [ ] Add failing fixtures for HTML `src`, `srcset`, linked styles, inline background images, favicon, PDFs, CSS `@import`, relative font URLs, and same basenames in different source directories. Assert all referenced local destinations exist and distinct source files do not collide.
-- [ ] Run `node --test test/assets.test.mjs`; verify the missing localization behavior fails.
-- [ ] Implement deterministic URL mapping, recursive CSS dependency capture, response validation, cache reuse, and asset type checks. Capture responsive variants and public downloads. Keep external iframe services external; remove tracking/widget resources from the capture queue.
-- [ ] Run the asset tests to PASS and import real assets. Confirm no required download errors remain and report genuinely unavailable source files with referring pages.
-- [ ] Commit with `feat: preserve local theme and media assets`.
+- [x] Add failing fixtures for HTML `src`, `srcset`, linked styles, inline background images, favicon, PDFs, CSS `@import`, relative font URLs, and same basenames in different source directories. Assert all referenced local destinations exist and distinct source files do not collide.
+- [x] Run `node --test test/assets.test.mjs`; verify the missing localization behavior fails.
+- [x] Implement deterministic URL mapping, recursive CSS dependency capture, response validation, cache reuse, and asset type checks. Capture responsive variants and public downloads. Keep external iframe services external; remove tracking/widget resources from the capture queue.
+- [x] Run the asset tests to PASS and import real assets. Confirm no required download errors remain and report genuinely unavailable source files with referring pages.
+- [x] Commit with `feat: preserve local theme and media assets`.
 
 ### Task 3: Faithful Eleventy rendering
 
@@ -86,12 +86,12 @@
 
 **Interfaces:** `normalizePage(capture: PageCapture, record: ExportRecord | null, assetMap: AssetMap): { page: PageRecord, bodyHtml: string, chrome: { headerHtml, footerHtml }, issues: object[] }`; `src/_data/archive.js` returns `PageRecord[]` with loaded `bodyHtml`. Templates render each record at `page.path`.
 
-- [ ] Add failing normalization fixtures proving local rewrites, anchor retention, Cloudflare email decoding, skip-link preservation, toolbar/admin/tracking removal, and content visibility after runtime removal. Assert substantive text remains and no admin/REST request hooks survive.
-- [ ] Run `node --test test/normalize.test.mjs`; confirm failure before implementing normalization.
-- [ ] Extract shared head/header/footer and per-page body structure, preserving page-specific classes, inline styles, generated Elementor CSS, titles, dates, canonical metadata, and expanded shortcode output. Reconcile XML text with rendered text and record material differences.
-- [ ] Configure Eleventy 3.1.6 with `src` input and `_site` output, passthrough assets, original permalinks, Nunjucks layouts, static sitemap/404, and no build-time networking. Avoid interpreting imported content as template expressions.
-- [ ] Run normalization tests and `npm run build` to PASS. Check all 41 baseline routes and captured pagination/archive routes exist. Confirm news pages display all 11 reachable posts with working older/newer navigation.
-- [ ] Commit with `feat: render the archive with Eleventy`.
+- [x] Add failing normalization fixtures proving local rewrites, anchor retention, Cloudflare email decoding, skip-link preservation, toolbar/admin/tracking removal, and content visibility after runtime removal. Assert substantive text remains and no admin/REST request hooks survive.
+- [x] Run `node --test test/normalize.test.mjs`; confirm failure before implementing normalization.
+- [x] Extract shared head/header/footer and per-page body structure, preserving page-specific classes, inline styles, generated Elementor CSS, titles, dates, canonical metadata, and expanded shortcode output. Reconcile XML text with rendered text and record material differences.
+- [x] Configure Eleventy 3.1.6 with `src` input and `_site` output, passthrough assets, original permalinks, Nunjucks layouts, static sitemap/404, and no build-time networking. Avoid interpreting imported content as template expressions.
+- [x] Run normalization tests and `npm run build` to PASS. Check all 41 baseline routes and captured pagination/archive routes exist. Confirm news pages display all 11 reachable posts with working older/newer navigation.
+- [x] Commit with `feat: render the archive with Eleventy`.
 
 ### Task 4: Restore visitor interactions
 
@@ -99,11 +99,11 @@
 
 **Interfaces:** Each browser module exports `init(root = document)`. `site.js` initializes modules once. Search records are `{ title, path, text, type }[]` at `/search-index.json`; query parameter `s` provides legacy search input.
 
-- [ ] Inspect original controls and settings on representative pages; record expected menu, accordion/tab, slideshow, sponsor, and video/lightbox behavior before replacing their runtimes.
-- [ ] Implement navigation toggles and dismissal, static search with safe text rendering and no-results output, disclosures/tabs with correct focus/ARIA, table-of-contents links, back-to-top, carousels with original timing and controls, pause/reduced-motion handling, and lightboxes where used. Keep external services and embeds at their existing destinations.
-- [ ] Start local preview on an unused port. Use the supported browser interface to exercise search via header and `?s=`, empty queries and no results; desktop/mobile menus; keyboard tab/accordion activation; previous/next/pagination and pause controls; anchor navigation; video/lightbox and back-to-top. Confirm visible state changes, not just event-handler presence.
-- [ ] Confirm all content remains visible without Elementor initialization; disable motion through the supported browser capability when available and verify a readable fallback. Record any browser verification limit rather than claiming unperformed checks.
-- [ ] Commit with `feat: restore static site interactions`.
+- [x] Inspect original controls and settings on representative pages; record expected menu, accordion/tab, slideshow, sponsor, and video/lightbox behavior before replacing their runtimes.
+- [x] Implement navigation toggles and dismissal, static search with safe text rendering and no-results output, disclosures/tabs with correct focus/ARIA, table-of-contents links, back-to-top, carousels with original timing and controls, pause/reduced-motion handling, and lightboxes where used. Keep external services and embeds at their existing destinations.
+- [x] Start local preview on an unused port. Use the supported browser interface to exercise search via header and `?s=`, empty queries and no results; desktop/mobile menus; keyboard tab/accordion activation; previous/next/pagination and pause controls; anchor navigation; video/lightbox and back-to-top. Confirm visible state changes, not just event-handler presence.
+- [x] Confirm all content remains visible without Elementor initialization; disable motion through the supported browser capability when available and verify a readable fallback. Record any browser verification limit rather than claiming unperformed checks.
+- [x] Commit with `feat: restore static site interactions`.
 
 ### Task 5: Link integrity and visual reconciliation
 
@@ -111,12 +111,12 @@
 
 **Interfaces:** `checkSite(outputDir: string): Promise<{ errors: object[], warnings: object[], routes: string[] }>`; command exits nonzero on missing routes/assets or unintended backend dependencies. Source-dead destinations must be explicitly attributed in the report.
 
-- [ ] Add failing checker fixtures: nested trailing-slash links, missing HTML route, missing responsive image/font, valid and invalid cross-page fragments, query-only search links, and forbidden WordPress endpoints. Assert valid static routes pass and missing resources fail with referring file locations.
-- [ ] Run `node --test test/output.test.mjs`; confirm the checker failures, then implement route/asset/fragment checks and known-source-link reporting.
-- [ ] Run `npm test`, `npm run build`, and `npm run check`; resolve all generated errors. Compare exported content inventory to generated routes and confirm every reachable post is represented.
-- [ ] Compare original and local home, standard page, news/post, FAQ, schedule, and sponsors at desktop and mobile widths through the supported browser interface. Check every remaining page for obvious overflow, hidden sections, missing images, and broken presentation; adjust only observed differences.
-- [ ] Record screenshot evidence and actual interaction/content verification results in the migration report, including external dependencies and source-dead links.
-- [ ] Commit with `test: verify archive fidelity and link integrity`.
+- [x] Add failing checker fixtures: nested trailing-slash links, missing HTML route, missing responsive image/font, valid and invalid cross-page fragments, query-only search links, and forbidden WordPress endpoints. Assert valid static routes pass and missing resources fail with referring file locations.
+- [x] Run `node --test test/output.test.mjs`; confirm the checker failures, then implement route/asset/fragment checks and known-source-link reporting.
+- [x] Run `npm test`, `npm run build`, and `npm run check`; resolve all generated errors. Compare exported content inventory to generated routes and confirm every reachable post is represented.
+- [x] Compare original and local home, standard page, news/post, FAQ, schedule, and sponsors at desktop and mobile widths through the supported browser interface. Check every remaining page for obvious overflow, hidden sections, missing images, and broken presentation; adjust only observed differences.
+- [x] Record screenshot evidence and actual interaction/content verification results in the migration report, including external dependencies and source-dead links.
+- [x] Commit with `test: verify archive fidelity and link integrity`.
 
 ### Task 6: GitHub Pages readiness and handoff
 
@@ -124,11 +124,11 @@
 
 **Interfaces:** `npm run import` performs explicit source refresh; `npm run build` runs Eleventy; `npm start` serves local preview; `npm test` runs importer/checker tests; `npm run check` validates `_site`.
 
-- [ ] Configure Node 24 and npm lockfile installation in CI. Follow GitHub's official Pages workflow with configure-pages, upload-pages-artifact targeting `_site`, and deploy-pages; grant Pages write/id-token write only where needed, and use the github-pages environment/concurrency.
-- [ ] Set the exact custom-domain content `forum2022.diglib.org` in `CNAME`; passthrough `CNAME` and `.nojekyll`; ignore `_site`, dependencies, and raw import caches, while retaining generated archive source inputs and needed assets.
-- [ ] Document clean install, build, preview, refresh/overwrite behavior, repository Pages source settings, custom-domain setup, source structure, external service dependencies, and explicit absence of live cutover.
-- [ ] Perform a clean `npm ci`, run `npm test`, `npm run build`, `npm run check`, and `git diff --check`. Demonstrate building from local saved inputs with WordPress fetching disabled. Verify emitted `CNAME` and workflow artifact path.
-- [ ] Commit with `ci: prepare archive for GitHub Pages`; complete the development review workflow and report verified local results, preview location, and remaining deployment steps. Do not push or change DNS as part of this plan.
+- [x] Configure Node 24 and npm lockfile installation in CI. Follow GitHub's official Pages workflow with configure-pages, upload-pages-artifact targeting `_site`, and deploy-pages; grant Pages write/id-token write only where needed, and use the github-pages environment/concurrency.
+- [x] Set the exact custom-domain content `forum2022.diglib.org` in `CNAME`; passthrough `CNAME` and `.nojekyll`; ignore `_site`, dependencies, and raw import caches, while retaining generated archive source inputs and needed assets.
+- [x] Document clean install, build, preview, refresh/overwrite behavior, repository Pages source settings, custom-domain setup, source structure, external service dependencies, and explicit absence of live cutover.
+- [x] Perform a clean `npm ci`, run `npm test`, `npm run build`, `npm run check`, and `git diff --check`. Demonstrate building from local saved inputs with WordPress fetching disabled. Verify emitted `CNAME` and workflow artifact path.
+- [x] Commit with `ci: prepare archive for GitHub Pages`; complete the development review workflow and report verified local results, preview location, and remaining deployment steps. Do not push or change DNS as part of this plan.
 
 ## Execution recommendation
 
