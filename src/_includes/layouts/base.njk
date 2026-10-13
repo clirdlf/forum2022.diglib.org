@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+{% include "partials/head.njk" %}
+</head>
+<body class="{{ entry.bodyClasses }} archive-static">
+<div class="wrapper">
+{% include "partials/header.njk" %}
+{{ content | safe }}
+{% include "partials/footer.njk" %}
+</div>
+<button id="scroll-to-top" class="archive-scroll-top" aria-label="Scroll To Top" type="button">↑</button>
+</body>
+</html>

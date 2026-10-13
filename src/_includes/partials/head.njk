@@ -1,0 +1,6 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if entry.path == "/" %}DLF Forum 2022{% else %}{{ entry.title }} — DLF Forum 2022{% endif %}</title>
+<link rel="canonical" href="{{ entry.path | absoluteUrl }}">
+{{ entry.headHtml | safe }}
+<link rel="stylesheet" href="/assets/css/archive.css">

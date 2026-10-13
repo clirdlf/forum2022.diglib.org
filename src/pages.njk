@@ -1,0 +1,9 @@
+---
+pagination:
+  data: archive
+  size: 1
+  alias: entry
+permalink: "{{ entry.path }}"
+layout: layouts/base.njk
+---
+{{ entry.bodyHtml | safe }}

@@ -1,0 +1,1 @@
+export default class {data(){return {permalink:'/sitemap.xml',eleventyExcludeFromCollections:true};}render({archive}){return '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+archive.map(p=>'<url><loc>https://forum2022.diglib.org'+p.path+'</loc></url>').join('')+'</urlset>';}}
