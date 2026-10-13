@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if entry.path == "/" %}DLF Forum 2022{% else %}{{ entry.title }} — DLF Forum 2022{% endif %}</title>
 <link rel="canonical" href="{{ entry.path | absoluteUrl }}">
-{{ entry.headHtml | safe }}
+{{ (entry.headHtml or site.defaultHead) | safe }}
 <link rel="stylesheet" href="/assets/css/archive.css">
 
 {% if site.swiperUrl %}<script src="{{ site.swiperUrl }}" defer></script>{% endif %}
