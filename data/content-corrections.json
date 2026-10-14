@@ -1,1 +1,8 @@
-{}
+{
+  "/": [
+    {
+      "find": "<video class=\"elementor-video\" src=\"/assets/vendor/a8bdcd6ddb59-thankyou_forum2022.mp4\"",
+      "replace": "<video class=\"elementor-video\" src=\"/assets/vendor/a8bdcd6ddb59-thankyou_forum2022.mp4\" poster=\"/assets/images/thankyou-forum2022-poster.jpg\""
+    }
+  ]
+}
