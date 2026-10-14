@@ -65,3 +65,11 @@ Recommendation: choose heading levels by document hierarchy while preserving sty
 ## Evidence
 
 Screenshots: `docs/qa/review-home-320.jpg`, `review-program-320.jpg`, `review-guide-focus.jpg`, and `review-menu-focus.jpg`. Numeric reflow observations are included in the preservation package's `review/reflow-results.json`. Earlier contrast repairs and their measurements are recorded in `docs/migration-report.md`; this review did not repeat a complete contrast audit.
+
+## Follow-up: image description and headings
+
+The current checkout resolves A11Y-02 and the specific heading issues in A11Y-04. After inspecting the homepage photo, its filename-based image name was replaced with “Two people smiling and shaking hands at a DLF Forum exhibit table.” No identities were inferred. Shared footer sections now use H2, both News pagination routes use H2 for post titles beneath their H1, and all eight FAQ questions use H2 followed by their original answer paragraphs. These scoped build-time repairs survive fresh source imports and are idempotent.
+
+Browser accessibility-tree inspection confirms the new image name and heading levels. Computed desktop footer typography remains 29px/29px and News title typography remains 30px/42px. FAQ questions preserve their original bold text styling; at 320 CSS pixels all eight headings and answers remain available without horizontal overflow. Screenshots: `docs/qa/faq-heading-repair-desktop.jpg` and `docs/qa/faq-heading-repair-mobile.jpg`.
+
+Five additional regression tests cover the actual retained source, content/link preservation, both News routes, and repeat application. The suite passes 59 tests; the 58-route link and configured accessibility semantics checks still report zero errors/violations. Independent code review found no issues in this change. VoiceOver speech remains unverified. A11Y-01 (mobile overlay focus containment) and A11Y-03 (PDF accessibility) remain open. The published preservation release remains the historical snapshot reviewed above; these follow-up fixes have not been added to its assets or tag.

@@ -3,6 +3,27 @@ import {load} from 'cheerio';
 // Reapplied during every build, so importing fresh WordPress HTML cannot undo repairs.
 export function enhanceAccessibility(html) {
   const $ = load(html, null, /<!doctype|<html(?:\s|>)/i.test(html));
+  const photoDescription = 'Two people smiling and shaking hands at a DLF Forum exhibit table.';
+  $('[role="img"][aria-label="JAN_6997-scaled.jpg"]').attr('aria-label', photoDescription);
+  $('img[alt="JAN_6997-scaled.jpg"]').attr('alt', photoDescription);
+  $('footer h5.elementor-heading-title').each((_, e) => { e.name = 'h2'; });
+
+  // Retained WordPress page IDs scope these editorial repairs to News and FAQ.
+  $('.elementor-151 h3.elementor-post__title').each((_, e) => { e.name = 'h2'; });
+  $('.elementor-127 .elementor-widget-text-editor p').each((_, e) => {
+    const paragraph = $(e);
+    const first = paragraph.contents().toArray().find(node => node.type !== 'text' || node.data.trim());
+    if (first?.name !== 'strong' || !$(first).text().trim().endsWith('?')) return;
+    const heading = $('<h2 class="archive-faq-question"></h2>').html($(first).html());
+    $(first).remove();
+    // The old line break is replaced by the block boundary between heading and answer.
+    while (paragraph.contents().length) {
+      const node = paragraph.contents()[0];
+      if (node.name !== 'br' && !(node.type === 'text' && !node.data.trim())) break;
+      $(node).remove();
+    }
+    paragraph.before(heading, '\n');
+  });
   const hasName = e => $(e).text().trim() || $(e).attr('aria-label') || $(e).attr('aria-labelledby') || $(e).find('img[alt]').toArray().some(img => img.attribs.alt?.trim());
   $('a.swiper-slide-inner').each((_, e) => {
     if (hasName(e)) return;

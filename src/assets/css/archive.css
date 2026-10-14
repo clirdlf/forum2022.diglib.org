@@ -40,6 +40,9 @@
 .archive-static .primary-menu-ul .nv-active>.wrap>a,.archive-static .primary-menu-ul a:hover {color:#b52d50!important}
 .archive-static footer :focus-visible {outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 2px #272626}
 .archive-static .archive-scroll-top:focus-visible {outline-color:#272626}
+/* FAQ question headings retain the original bold paragraph typography. */
+.archive-static .elementor-127 .archive-faq-question {font:inherit;font-weight:700;letter-spacing:normal;text-transform:none;margin:0}
+.archive-static .elementor-151 .elementor-post__title {line-height:1.4}
 .archive-program {padding:40px 20px;max-width:1200px;margin:auto}
 .archive-program nav ul {display:flex;gap:16px;flex-wrap:wrap;list-style:none;padding:0}
 .archive-program details {padding:16px;margin:12px 0;border:1px solid #bbb;border-radius:4px}
